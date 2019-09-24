@@ -5,13 +5,68 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Padding="0,30,0,0"
     mc:Ignorable="d">
     <ContentPage.Content>
+
         <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
+
+            <!--  not working (with spacing)  -->
+            <CollectionView>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>one</x:String>
+                        <x:String>two</x:String>
+                        <x:String>three</x:String>
+                        <x:String>four</x:String>
+                        <x:String>five</x:String>
+                        <x:String>six</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+
+                <CollectionView.ItemsLayout>
+                    <ListItemsLayout ItemSpacing="15" Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Label Text="O" TextColor="Blue" />
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+
+
+            <!--  working (no spacing)  -->
+            <CollectionView>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>one</x:String>
+                        <x:String>two</x:String>
+                        <x:String>three</x:String>
+                        <x:String>four</x:String>
+                        <x:String>five</x:String>
+                        <x:String>six</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+
+                <CollectionView.ItemsLayout>
+                    <ListItemsLayout Orientation="Horizontal" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Label Text="X" TextColor="Red" />
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
         </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>
