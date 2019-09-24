@@ -31,7 +31,39 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
 
-                        <Label Text="O" TextColor="Blue" />
+                        <Label Text="O" TextColor="Red" />
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+
+
+            <!--  not working (with GridLayout and spacing)  -->
+            <CollectionView>
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>one</x:String>
+                        <x:String>two</x:String>
+                        <x:String>three</x:String>
+                        <x:String>four</x:String>
+                        <x:String>five</x:String>
+                        <x:String>six</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        HorizontalItemSpacing="15"
+                        Orientation="Horizontal"
+                        Span="1" />
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Label Text="T" TextColor="Yellow" />
 
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -60,7 +92,7 @@
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
 
-                        <Label Text="X" TextColor="Red" />
+                        <Label Text="X" TextColor="Green" />
 
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
