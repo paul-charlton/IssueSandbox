@@ -1,4 +1,4 @@
-﻿using IssueSandbox.Views.Issues;
+﻿using IssueSandbox.Views;
 using Xamarin.Forms;
 
 namespace IssueSandbox
@@ -9,7 +9,7 @@ namespace IssueSandbox
         {
             InitializeComponent();
 
-            MainPage = new CollectionViewLosingItems();
+            MainPage = new SomePage();
         }
 
         protected override void OnResume()

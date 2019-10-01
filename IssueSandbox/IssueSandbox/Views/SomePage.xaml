@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    x:Class="IssueSandbox.Views.Issues.CollectionViewLosingItems"
+    x:Class="IssueSandbox.Views.SomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -9,8 +9,9 @@
     <ContentPage.Content>
         <StackLayout>
             <Label
+                x:Name="NamedLabel"
                 HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
+                Text="Welcome to Xamarin.Forms"
                 VerticalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>

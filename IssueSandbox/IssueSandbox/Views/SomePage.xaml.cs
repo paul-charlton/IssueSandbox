@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace IssueSandbox.Views.Issues
+namespace IssueSandbox.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CollectionViewLosingItems : ContentPage
+    public partial class SomePage : ContentPage
     {
-        public CollectionViewLosingItems()
+        public SomePage()
         {
             InitializeComponent();
         }
